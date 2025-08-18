@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html data-init="no-js">
 <head>
-	
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7SR81TNQ7"></script>
 <script>
@@ -733,7 +732,8 @@ window.playSound = function(soundName, volume = 0.7, playbackRate = 1.0) {
         console.log(`Error creating audio for '${soundName}':`, error);
         return null;
     }
-};</script><tw-tag name="credits" color="none"></tw-tag><tw-passagedata pid="1" name="CalculatePower" tags="Script" position="50,275" size="100,100">&lt;&lt;set $totalPower = $strength + $financial + $networking + $careerReadiness + $techSkills&gt;&gt;
+};
+</script><tw-tag name="credits" color="none"></tw-tag><tw-passagedata pid="1" name="CalculatePower" tags="Script" position="50,275" size="100,100">&lt;&lt;set $totalPower = $strength + $financial + $networking + $careerReadiness + $techSkills&gt;&gt;
 
 &lt;&lt;if $extraItems[&quot;Mock Interview&quot;]&gt;&gt;
   &lt;&lt;set $totalPower += 10&gt;&gt;
@@ -1199,6 +1199,7 @@ window.playSound = function(soundName, volume = 0.7, playbackRate = 1.0) {
     gap: 20px;
   }
 }
+		
 &lt;/style&gt;
 
 &lt;script&gt;
@@ -1261,7 +1262,7 @@ window.playSound = function(soundName, volume = 0.7, playbackRate = 1.0) {
       title: &quot;Job Search &amp; Applications&quot;,
       description: &quot;You&#39;re looking for internships and job opportunities in your field.&quot;,
       correctTool: &quot;talentconnect&quot;,
-      explanation: &quot;NUS TalentConnect is NUS&#39;s job portal that connects you directly with employers and exclusive job opportunities, making it easier to find relevant positions in your field.&quot;
+      explanation: &quot;NUS TalentConnect is the University’s dedicated job portal, providing direct access to employers and exclusive job opportunities to help you discover positions relevant to your area of expertise.&quot;
     },
     {
       title: &quot;Skills Development &amp; Training&quot;,
@@ -2082,6 +2083,7 @@ body {
     transform: scale(0.95);
 }
 
+
 .stats-glow {
     animation: glow 2s infinite;
 }
@@ -2128,7 +2130,7 @@ body {
 
 &lt;!-- Quick Time Event Overlay (initially hidden) --&gt;
 &lt;div id=&quot;qteOverlay&quot; class=&quot;qte-overlay&quot; style=&quot;display: none;&quot;&gt;
-    &lt;div class=&quot;qte-content&quot;&gt;
+    &lt;div class=&quot;qte-content&quot; style=&quot;transform: scale(0.8);&quot;&gt;
         &lt;h2&gt;Emergency Training!&lt;/h2&gt;
         &lt;p&gt;Oh no! The Monster of Doubt &amp; Fear has higher attack than expected!&lt;br&gt;Complete this quick training to gain strength and weaken the monster!&lt;/p&gt;&lt;p id=&quot;qteMessage&quot;&gt;&lt;/p&gt;&lt;div id=&quot;qteCountdown&quot; style=&quot;font-size: 48px; font-weight: bold; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin: 20px 0;&quot;&gt;7&lt;/div&gt;
         &lt;div id=&quot;qteButtons&quot;&gt;
@@ -2145,9 +2147,9 @@ body {
 
 &lt;!-- Finishing Move Mini-Game Overlay --&gt;
 &lt;div id=&quot;finishingMoveOverlay&quot; class=&quot;qte-overlay&quot; style=&quot;display: none;&quot;&gt;
-    &lt;div class=&quot;qte-content&quot;&gt;
-        &lt;h2&gt;🎯 FINISHING MOVE!&lt;/h2&gt;
-        &lt;p&gt;The monster is weakened! Time for the ultimate career preparation! Click on the emojis to earn point!&lt;/p&gt;
+    &lt;div class=&quot;qte-content&quot; style=&quot;transform: scale(0.8);&quot;&gt;
+        &lt;h2&gt;🎯 Deal the Ultimate Blow!&lt;/h2&gt;
+        &lt;p&gt;Fear and Doubt is trying to overpower you. Empower yourself by attending NUS Career Fest! Discover new opportunities, gain confidence, and deal the ultimate blow. Click on the emojis below to boost your confidence and unlock your potential!&lt;/p&gt;
         &lt;div class=&quot;score-display&quot;&gt;Score: &lt;span id=&quot;finishingScore&quot;&gt;0&lt;/span&gt;&lt;/div&gt;
         &lt;div id=&quot;finishingTimer&quot; style=&quot;font-size: 36px; font-weight: bold; color: #fff; margin: 10px 0;&quot;&gt;10&lt;/div&gt;
         &lt;div class=&quot;emoji-game&quot; id=&quot;emojiGame&quot;&gt;
@@ -2155,7 +2157,7 @@ body {
         &lt;/div&gt;
         &lt;div id=&quot;finishingResults&quot; style=&quot;display: none;&quot;&gt;
             &lt;p id=&quot;finishingResultMessage&quot;&gt;&lt;/p&gt;
-            &lt;button id=&quot;finishingContinueBtn&quot; class=&quot;qte-button&quot; onclick=&quot;finishingComplete()&quot;&gt;Deliver Final Blow!&lt;/button&gt;
+            &lt;button id=&quot;finishingContinueBtn&quot; class=&quot;qte-button&quot; onclick=&quot;finishingComplete()&quot;&gt;Deliver Ultimate Blow!&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -2682,7 +2684,7 @@ if (typeof window.originalReset === &#39;undefined&#39;) {
     };
 }
 
-&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Financial" tags="" position="575,500" size="100,100">&lt;&lt;if !$fq1 or !$fq2 or !$fq3&gt;&gt;&lt;&lt;set $fq1 = &quot;&quot;&gt;&gt;&lt;&lt;set $fq2 = &quot;&quot;&gt;&gt;&lt;&lt;set $fq3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;financial-wellbeing.png&quot; alt=&quot;Financial Wellbeing&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Financial Wellbeing&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Sound personal financial management is a critical skill that equips students to be future-ready, face life&#39;s changes and transitions with confidence, and thrive across personal and professional life domains.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Financial Wellbeing&lt;/strong&gt; provides students with training in essential financial planning skills and goes a step further by addressing the mental and emotional aspects of money management.&lt;/p&gt;&lt;p&gt;💡 Learn more here: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/life-skills/financial-wellbeing&quot; target=&quot;_blank&quot;&gt;Finanical Wellbeing&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following questions to complete your training. You may need to visit the website above.&lt;/p&gt;&lt;strong&gt;1. Which organization developed Introduction to Financial Wellbeing (CFG1003) in partnership with NUS CFG?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;MoneySense&quot;&gt;&gt; MoneySense&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;PlayMoolah&quot;&gt;&gt; PlayMoolah&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;MoneyOwl&quot;&gt;&gt; MoneyOwl&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;OCBC Bank&quot;&gt;&gt; OCBC Bank&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. How many units is CFG1004 (Financial Readiness for Young Professionals) worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;0 Units&quot;&gt;&gt; 0 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;1 Unit&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;2 Units&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;3 Units&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What is the co-requisite for CFG1004?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1001&quot;&gt;&gt; CFG1001&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1002&quot;&gt;&gt; CFG1002&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1003&quot;&gt;&gt; CFG1003&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;No co-requisites&quot;&gt;&gt; No co-requisites&lt;br&gt;&lt;br&gt;&lt;div id=&quot;financial-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;financial-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkFinancialAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="5" name="Financial" tags="" position="575,500" size="100,100">&lt;&lt;if !$fq1 or !$fq2 or !$fq3&gt;&gt;&lt;&lt;set $fq1 = &quot;&quot;&gt;&gt;&lt;&lt;set $fq2 = &quot;&quot;&gt;&gt;&lt;&lt;set $fq3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;financial-wellbeing.png&quot; alt=&quot;Financial Wellbeing&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Financial Wellbeing&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Sound personal financial management is a critical skill that equips students to be future-ready, face life&#39;s changes and transitions with confidence, and thrive across personal and professional life domains.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Financial Wellbeing&lt;/strong&gt; provides students with training in essential financial planning skills and goes a step further by addressing the mental and emotional aspects of money management.&lt;/p&gt;&lt;p&gt;💡 Learn more here: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/life-skills/financial-wellbeing&quot; target=&quot;_blank&quot;&gt;Finanical Wellbeing&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following questions to complete your training. You may need to visit the website above.&lt;/p&gt;&lt;strong&gt;1. Which organization developed Introduction to Financial Wellbeing (CFG1003) in partnership with NUS CFG?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;MoneySense&quot;&gt;&gt; MoneySense&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;PlayMoolah&quot;&gt;&gt; PlayMoolah&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;MoneyOwl&quot;&gt;&gt; MoneyOwl&lt;br&gt;&lt;&lt;radiobutton &quot;$fq1&quot; &quot;OCBC Bank&quot;&gt;&gt; OCBC Bank&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. How many Unrestricted Elective (UE) units is CFG1004 (Financial Readiness for Young Professionals) worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;0 Units&quot;&gt;&gt; 0 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;1 Unit&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;2 Units&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$fq2&quot; &quot;3 Units&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What is the co-requisite for CFG1004?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1001&quot;&gt;&gt; CFG1001&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1002&quot;&gt;&gt; CFG1002&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;CFG1003&quot;&gt;&gt; CFG1003&lt;br&gt;&lt;&lt;radiobutton &quot;$fq3&quot; &quot;No co-requisites&quot;&gt;&gt; No co-requisites&lt;br&gt;&lt;br&gt;&lt;div id=&quot;financial-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;financial-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkFinancialAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
 
 &lt;&lt;script&gt;&gt;
 window.checkFinancialAnswers = function() {
@@ -2788,7 +2790,7 @@ window.checkFinancialAnswers = function() {
 	color: white;
 	text-decoration: none;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="6" name="Global Insights" tags="" position="800,500" size="100,100">&lt;&lt;if !$q1 or !$q2 or !$q3&gt;&gt;&lt;&lt;set $q1 = &quot;&quot;&gt;&gt;&lt;&lt;set $q2 = &quot;&quot;&gt;&gt;&lt;&lt;set $q3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;global-insights.png&quot; alt=&quot;Global Industry Insights&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Global Industry Insights (CFG2002)&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Gain an immersive understanding of emerging economies in the region by visiting them and enhancing your global mindset.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Global Industry Insights&lt;/strong&gt; offers in-country experiences where you visit, meet and learn from established companies across Asia over a week-long trip, developing communication, collaboration, and networking skills.&lt;/p&gt;&lt;p&gt;💡 Learn more here: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/industry-insights&quot; target=&quot;_blank&quot;&gt;Industry Insights&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following questions to complete your training. You may need to visit the website above.&lt;/p&gt;&lt;strong&gt;1. How many course units is Global Industry Insights worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;1&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;2&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;3&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;4&quot;&gt;&gt; 4 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. What is ASEAN projected to become by 2030?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;3rd largest single market&quot;&gt;&gt; 3rd largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;4th largest single market&quot;&gt;&gt; 4th largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;5th largest single market&quot;&gt;&gt; 5th largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;2nd largest single market&quot;&gt;&gt; 2nd largest single market&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What is the maximum number of students per country for the trips?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;30 students&quot;&gt;&gt; 30 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;36 students&quot;&gt;&gt; 36 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;40 students&quot;&gt;&gt; 40 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;32 students&quot;&gt;&gt; 32 students&lt;br&gt;&lt;br&gt;&lt;div id=&quot;global-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;global-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkGlobalAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="6" name="Global Insights" tags="" position="800,500" size="100,100">&lt;&lt;if !$q1 or !$q2 or !$q3&gt;&gt;&lt;&lt;set $q1 = &quot;&quot;&gt;&gt;&lt;&lt;set $q2 = &quot;&quot;&gt;&gt;&lt;&lt;set $q3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;global-insights.png&quot; alt=&quot;Global Industry Insights&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Global Industry Insights (CFG2002)&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Gain an immersive understanding of emerging economies in the region by visiting them and enhancing your global mindset.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Global Industry Insights&lt;/strong&gt; offers in-country experiences where you visit, meet and learn from established companies across Asia over a week-long trip, developing communication, collaboration, and networking skills.&lt;/p&gt;&lt;p&gt;💡 Learn more here: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/industry-insights&quot; target=&quot;_blank&quot;&gt;Industry Insights&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following questions to complete your training. You may need to visit the website above.&lt;/p&gt;&lt;strong&gt;1. How many Unrestricted Elective (UE) units is Global Industry Insights worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;1&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;2&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;3&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$q1&quot; &quot;4&quot;&gt;&gt; 4 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. What is ASEAN projected to become by 2030?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;3rd largest single market&quot;&gt;&gt; 3rd largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;4th largest single market&quot;&gt;&gt; 4th largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;5th largest single market&quot;&gt;&gt; 5th largest single market&lt;br&gt;&lt;&lt;radiobutton &quot;$q2&quot; &quot;2nd largest single market&quot;&gt;&gt; 2nd largest single market&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What is the maximum number of students per country for the trips?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;30 students&quot;&gt;&gt; 30 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;36 students&quot;&gt;&gt; 36 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;40 students&quot;&gt;&gt; 40 students&lt;br&gt;&lt;&lt;radiobutton &quot;$q3&quot; &quot;32 students&quot;&gt;&gt; 32 students&lt;br&gt;&lt;br&gt;&lt;div id=&quot;global-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;global-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkGlobalAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
 
 &lt;&lt;script&gt;&gt;
 window.checkGlobalAnswers = function() {
@@ -2797,15 +2799,15 @@ window.checkGlobalAnswers = function() {
 	
 	if (variables().q1 !== &quot;2&quot;) {
 		wrongCount += 1;
-		wrongMsg += &quot;&lt;p&gt;❌ Question 1 is incorrect. ❓ Unsure? Check back to the URL above!&lt;/p&gt;&quot;;
+		wrongMsg += &quot;&lt;p&gt;❌ Question 1 is incorrect. &lt;/p&gt;&quot;;
 	}
 	if (variables().q2 !== &quot;4th largest single market&quot;) {
 		wrongCount += 1;
-		wrongMsg += &quot;&lt;p&gt;❌ Question 2 is incorrect. ❓ Unsure? Check back to the URL above!&lt;/p&gt;&quot;;
+		wrongMsg += &quot;&lt;p&gt;❌ Question 2 is incorrect. &lt;/p&gt;&quot;;
 	}
 	if (variables().q3 !== &quot;36 students&quot;) {
 		wrongCount += 1;
-		wrongMsg += &quot;&lt;p&gt;❌ Question 3 is incorrect. ❓ Unsure? Check back to the URL above!&lt;/p&gt;&quot;;
+		wrongMsg += &quot;&lt;p&gt;❌ Question 3 is incorrect. &lt;/p&gt;&quot;;
 	}
 	
 	if (wrongCount === 0) {
@@ -2827,7 +2829,7 @@ window.checkGlobalAnswers = function() {
 			&#39;&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;SugarCube.Engine.play(\&#39;Power Awakening\&#39;)&quot; class=&quot;return-link&quot;&gt;Return to Power Awakening&lt;/a&gt;&#39;;
 	} else {
 		document.getElementById(&quot;global-quiz-message&quot;).innerHTML = 
-			&quot;&lt;p&gt;&lt;span style=\&quot;color: red;\&quot;&gt;❌ You got &lt;strong&gt;&quot; + wrongCount + &quot;&lt;/strong&gt; question(s) wrong.&lt;/span&gt;&lt;/p&gt;&quot; + wrongMsg;
+			&quot;&lt;p&gt;&lt;span style=\&quot;color: red;\&quot;&gt;❌ You got &lt;strong&gt;&quot; + wrongCount + &quot;&lt;/strong&gt; question(s) wrong.&lt;/span&gt;❓ Unsure? Check back to the URL above!&lt;/p&gt;&quot; + wrongMsg;
 	}
 };
 &lt;&lt;/script&gt;&gt;
@@ -2910,7 +2912,7 @@ window.checkGlobalAnswers = function() {
 
 &lt;div class=&quot;content-container&quot;&gt;
 	&lt;h2&gt;👥 Group Coaching Session In Progress&lt;/h2&gt;&lt;p&gt;Your 1.5 hour (1.5-minute) group coaching session has begun.  
-	Your goal: &#39;Click on your teammates and engage with as many of them for collaboration and earn points! &lt;/p&gt;
+	Your goal: Click on your teammates and engage with as many of them for collaboration and earn points! &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Time remaining:&lt;/strong&gt; &lt;span id=&quot;groupTimeDisplay&quot;&gt;90&lt;/span&gt; seconds | &lt;strong&gt;Collaboration points:&lt;/strong&gt; &lt;span id=&quot;collabCount&quot;&gt;0&lt;/span&gt;/10&lt;/p&gt;&lt;p style=&quot;font-style: italic; margin-bottom: 0.5em;&quot;&gt;💡 Click on your teammates 👨‍🎓👩‍🎓 to collaborate before they move away!&lt;/p&gt;&lt;div id=&quot;groupArea&quot; style=&quot;position: relative; height: 350px; background: linear-gradient(135deg, #e8f5e8, #f0f8ff); border: 2px dashed #4a90e2; margin-top: 0; overflow: hidden; border-radius: 8px;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;groupNextLink&quot; style=&quot;margin-top: 20px; text-align: center;&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 
@@ -3738,7 +3740,7 @@ $(document).one(&#39;:passageend&#39;, function() {
           &lt;div id=&quot;sequence-feedback&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div id=&quot;timing-challenge&quot; style=&quot;display: none;&quot;&gt;
-&lt;p&gt;CKeep your meetings concise. Foster structure, clarity, and open dialogue in meetings to lead to meaningful outcomes while respecting everyone’s time.&lt;/p&gt;
+&lt;p&gt;Keep your meetings concise. Foster structure, clarity, and open dialogue in meetings to lead to meaningful outcomes while respecting everyone’s time.&lt;/p&gt;
           &lt;p&gt;Click when the meeting timer shows exactly 10 seconds!&lt;/p&gt;
           &lt;div id=&quot;timer-display&quot;&gt;00:00&lt;/div&gt;
           &lt;button id=&quot;timer-click&quot;&gt;⏰ Perfect Timing!&lt;/button&gt;
@@ -4448,7 +4450,7 @@ function returnToTrials() {
   &lt;div class=&quot;mentor-intro&quot;&gt;
   &lt;img src=&quot;mentor.png&quot; alt=&quot;Mentor&quot; class=&quot;mentor-img&quot;&gt;
   &lt;div class=&quot;mentor-text&quot;&gt;
-    A wise Mentor appears. They say:&lt;br&gt;
+    A wise Mentor appears. He says:&lt;br&gt;
     &lt;strong&gt;&quot;To sharpen your skills, you need advice and coaching. Will you undertake individual training or join the thematic career clinics?&quot;&lt;/strong&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -5066,7 +5068,8 @@ window.checkRootsAnswers = function() {
 &lt;style&gt;
 #gameplay-screen {
   margin: 20px auto;
-  padding: 20px 100px;
+  padding: 20px 60px;
+  max-width: 900px;       /* &lt;-- constrain width */
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 18px;
   color: white;
@@ -5174,7 +5177,7 @@ window.checkRootsAnswers = function() {
   transform: translateY(-1px) !important;
 }
 &lt;/style&gt;
-</tw-passagedata><tw-passagedata pid="18" name="Career Catalyst" tags="" position="325,500" size="100,100">&lt;&lt;if !$cq1 or !$cq2 or !$cq3&gt;&gt;&lt;&lt;set $cq1 = &quot;&quot;&gt;&gt;&lt;&lt;set $cq2 = &quot;&quot;&gt;&gt;&lt;&lt;set $cq3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;career-catalyst.png&quot; alt=&quot;Career Catalyst&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Career Catalyst (CFG1002)&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Learn the most in-demand career skills to prepare for internships and future work.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kick-start your career preparation with CFG’s &lt;strong&gt;Career Catalyst.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;💡 Learn more: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/career-skills&quot; target=&quot;_blank&quot;&gt;Career Catalyst Course Page&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following to complete your Career Catalyst training.&lt;/p&gt;&lt;strong&gt;1. How many units is CFG1002 Career Catalyst worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;1&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;2&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;3&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;4&quot;&gt;&gt; 4 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. Which of the following is NOT listed as a focus area of CFG1002?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Adaptability&quot;&gt;&gt; Adaptability&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Emotional Agility&quot;&gt;&gt; Emotional Agility&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Communication&quot;&gt;&gt; Communication&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Collaboration&quot;&gt;&gt; Collaboration&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What type of learning format is CFG1002 offered in?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Self-paced online course&quot;&gt;&gt; Hybrid in person classes and online e-learning&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Live weekly webinars&quot;&gt;&gt; Live weekly webinars&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;In-person classes&quot;&gt;&gt; In-person classes&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Hybrid seminar and workshops&quot;&gt;&gt; Self-paced online course&lt;br&gt;&lt;br&gt;&lt;div id=&quot;career-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;career-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="18" name="Career Catalyst" tags="" position="325,500" size="100,100">&lt;&lt;if !$cq1 or !$cq2 or !$cq3&gt;&gt;&lt;&lt;set $cq1 = &quot;&quot;&gt;&gt;&lt;&lt;set $cq2 = &quot;&quot;&gt;&gt;&lt;&lt;set $cq3 = &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;content-container&quot;&gt;&lt;div class=&quot;page-header&quot;&gt;&lt;img src=&quot;career-catalyst.png&quot; alt=&quot;Career Catalyst&quot; class=&quot;page-logo&quot;&gt;&lt;h2&gt;Career Catalyst (CFG1002)&lt;/h2&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Learn the most in-demand career skills to prepare for internships and future work.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Kick-start your career preparation with CFG’s &lt;strong&gt;Career Catalyst.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;💡 Learn more: &lt;a href=&quot;https://nus.edu.sg/cfg/students/career-ready/career-skills&quot; target=&quot;_blank&quot;&gt;Career Catalyst Course Page&lt;/a&gt;&lt;/p&gt;&lt;hr&gt;&lt;h3&gt;🧠 Training Quiz&lt;/h3&gt;&lt;p&gt;Answer the following to complete your Career Catalyst training.&lt;/p&gt;&lt;strong&gt;1. How many Unrestricted Elective (UE) units is CFG1002 Career Catalyst worth?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;1&quot;&gt;&gt; 1 Unit&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;2&quot;&gt;&gt; 2 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;3&quot;&gt;&gt; 3 Units&lt;br&gt;&lt;&lt;radiobutton &quot;$cq1&quot; &quot;4&quot;&gt;&gt; 4 Units&lt;br&gt;&lt;br&gt;&lt;strong&gt;2. Which of the following is NOT listed as a focus area of CFG1002?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Adaptability&quot;&gt;&gt; Adaptability&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Emotional Agility&quot;&gt;&gt; Emotional Agility&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Communication&quot;&gt;&gt; Communication&lt;br&gt;&lt;&lt;radiobutton &quot;$cq2&quot; &quot;Collaboration&quot;&gt;&gt; Collaboration&lt;br&gt;&lt;br&gt;&lt;strong&gt;3. What type of learning format is CFG1002 offered in?&lt;/strong&gt;&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Self-paced online course&quot;&gt;&gt; Hybrid in person classes and online e-learning&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Live weekly webinars&quot;&gt;&gt; Live weekly webinars&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;In-person classes&quot;&gt;&gt; In-person classes&lt;br&gt;&lt;&lt;radiobutton &quot;$cq3&quot; &quot;Hybrid seminar and workshops&quot;&gt;&gt; Self-paced online course&lt;br&gt;&lt;br&gt;&lt;div id=&quot;career-quiz-message&quot;&gt;&lt;/div&gt;&lt;div id=&quot;career-quiz-button&quot;&gt;&lt;div class=&quot;custom-button&quot; onclick=&quot;checkAnswers()&quot;&gt;Submit Answers&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;
 
 &lt;&lt;script&gt;&gt;
 window.checkAnswers = function() {
